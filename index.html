@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
-    
+    <h1>AKAN NAME GENERATOR</h1>
+    <form id="akanNames">
+        <label for="DOB">Date of Birth:</label>
+        <input type="date" id="DOB" required><br><br>
+      
+        <label for="gender">Gender:</label>
+        <select id="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <br><br>
+      
+        <button type="submit">Generate Akan Name</button>
+      </form>
+      
+      <p id="result"></p> 
+     <script src="./script.js"></script>
 </body>
+
 </html>
