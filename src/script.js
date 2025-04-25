@@ -12,14 +12,19 @@ document.getElementById("akanNames").addEventListener("submit", function(e) {
     }
 
     const birthDate = new Date(DOB);
-    const dayOfTheWeek = birthDate.getDay(); // Use getDay() for weekday (0-6, Sunday-Saturday)
+    if (isNaN(birthDate.getTime())) {
+        alert("invalid date entered.")
+        return
+    }
+
+    const dayOfTheWeek = birthDate.getDay()
 
     const maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
     const femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
     let akanName = "";
 
-    // Get the Akan name based on gender and day of the week
+
     if (gender === "male") {
         akanName = maleNames[dayOfTheWeek];
     } else if (gender === "female") {
@@ -29,15 +34,15 @@ document.getElementById("akanNames").addEventListener("submit", function(e) {
         return;
     }
 
-    // Display the Akan name
+    
     document.getElementById("result").innerText = `Generated First Name: ${akanName}`;
 });
 
-// Function to calculate the day of the week based on the formula
+
 function calculateDayOfWeek(datestring) {
     const date = new Date(datestring);
     const year = date.getFullYear();
-    const month = date.getMonth() + 1; // Months are 0-indexed, so we add 1
+    const month = date.getMonth() + 1;
     const day = date.getDate();
 
     const CC = Math.floor(year / 100);
@@ -52,5 +57,5 @@ function calculateDayOfWeek(datestring) {
         DD  
     ) % 7;
 
-    return ((d % 7) + 7) % 7; // Normalize to a positive value between 0-6
+    return ((d % 7) + 7) % 7; 
 }
