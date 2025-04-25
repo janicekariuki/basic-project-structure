@@ -1,4 +1,4 @@
-body {
+.body {
     background-color: rebeccapurple;
     margin: 0;
     padding: 0;
@@ -6,12 +6,12 @@ body {
     justify-content: center;
     align-items: center;
 }
-h1 {
+.h1 {
     font-style: italic;
     font-size: medium;
 }
 
-p {
+.p {
     font-style: normal;
     font-weight: 200;
 }
