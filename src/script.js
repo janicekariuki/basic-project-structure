@@ -5,7 +5,7 @@ document.getElementById("akanNames").addEventListener("submit", function(e) {
     // Get user input
     const DOB = document.getElementById("DOB").value;
     const gender = document.getElementById("gender").value;
-
+    const result = document.getElementById("result").value
     if (!DOB || !gender) {
         alert("Please provide both gender and date of birth.");
         return;
